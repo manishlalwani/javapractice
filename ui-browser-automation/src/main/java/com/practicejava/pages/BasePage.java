@@ -17,7 +17,7 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    protected void writeTest(WebElement element, String text) {
+    protected void writeText(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(text);
@@ -39,4 +39,5 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
+
 }

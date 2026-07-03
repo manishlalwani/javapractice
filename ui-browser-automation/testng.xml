@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org" >
+<suite name="TestSuite">
+    <test name="TestExecution">
+        <classes>
+        <class name="com.practicejava.tests.HomePageTest">
+        <methods>
+            <include name="verifyHomePageTitleTest" />
+            <include name="verifySearchButtonTest" />
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
