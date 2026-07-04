@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.practicejava.drivers.DriverFactory;
+import com.practicejava.framework.FrameworkConstants;
 
 public class BaseTest {
 
@@ -14,12 +15,10 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         System.out.println("Before Test");
-        System.setProperty("webdriver.chrome.silentOutput", "true");
-        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(java.util.logging.Level.SEVERE);
+
         factory = new DriverFactory();
         driver = factory.getDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.makemytrip.com");
+        driver.get(FrameworkConstants.APP_URL);
 
     }
 
